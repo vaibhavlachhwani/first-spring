@@ -1,5 +1,10 @@
 package com.vaibhav.first_spring.game;
 
+import org.springframework.context.annotation.Primary;
+import org.springframework.stereotype.Component;
+
+@Component
+@Primary
 public class MarioGame implements IGamingConsole{
     public void up() {
         System.out.println("Jump");

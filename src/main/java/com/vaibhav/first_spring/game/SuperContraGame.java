@@ -1,5 +1,10 @@
 package com.vaibhav.first_spring.game;
 
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
+
+@Component
+@Qualifier("SuperContraGameQualifier")
 public class SuperContraGame implements IGamingConsole{
     @Override
     public void up() {
