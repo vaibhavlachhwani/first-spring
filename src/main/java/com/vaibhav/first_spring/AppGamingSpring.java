@@ -8,24 +8,20 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-class AppGamingConfig {
+public class AppGamingSpring {
     @Bean
     public IGamingConsole game() {
-        var game = new PacManGame();
-        return game;
+        return new PacManGame();
     }
 
     @Bean
     public GameRunner gameRunner(IGamingConsole game) {
-        var gameRunner = new GameRunner(game);
-        return gameRunner;
+        return new GameRunner(game);
     }
-}
 
-public class AppGamingSpring {
     public static void main(String[] args) {
         try (var context =
-                     new AnnotationConfigApplicationContext(AppGamingConfig.class)) {
+                     new AnnotationConfigApplicationContext(AppGamingSpring.class)) {
             ((GameRunner) context.getBean("gameRunner")).run();
         }
     }
