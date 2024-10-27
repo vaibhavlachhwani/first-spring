@@ -1,6 +1,6 @@
 package com.vaibhav.first_spring.game;
 
-public class MarioGame {
+public class MarioGame implements IGamingConsole{
     public void up() {
         System.out.println("Jump");
     }

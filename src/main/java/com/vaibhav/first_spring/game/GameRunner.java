@@ -1,13 +1,13 @@
 package com.vaibhav.first_spring.game;
 
 public class GameRunner {
-    private MarioGame game;
-    public GameRunner(MarioGame game) {
+    private IGamingConsole game;
+    public GameRunner(IGamingConsole game) {
         this.game = game;
     }
 
     public void run() {
-        System.out.println("Running game : " + game);
+        System.out.println("Running game : " + game.getClass().getName());
 
         game.up();
         game.down();
